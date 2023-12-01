@@ -146,8 +146,8 @@
         }
 
         .Guestcards .card-text {
-            background-color: #fff;
-            color: #000;
+            background-color: transparent;
+            color: #ffffff;
             padding: 10px;
             overflow: hidden;
             border-radius: 5px;
@@ -246,8 +246,10 @@
             let temp_html = `
         <div class="col">
             <div class="card-body">
-                <p class="card-text">${vname}:${comment}</p>
-                <img src="${selectedImage}" alt="Selected Image"> <!-- 추가: 이미지 출력 -->
+                <p class="card-text">
+                    <img src="${selectedImage}" alt="Selected Image">
+                    ${vname} : ${comment}
+                </p>
             </div>
         </div>`;
             $('#Gcards').append(temp_html);
